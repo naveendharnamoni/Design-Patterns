@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy Pattern", "..\..\..\Downloads\c-sharp-design-patterns-strategy\02\demos\Demo 1 - Strategy Pattern First Look\Start_Here\Strategy Pattern.csproj", "{EEE94075-65FD-4378-B92C-1861BA25F223}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy Pattern", "StrategyPattern\Strategy Pattern.csproj", "{547E86BA-1F70-42E0-91EE-921F4BC0846D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EEE94075-65FD-4378-B92C-1861BA25F223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEE94075-65FD-4378-B92C-1861BA25F223}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEE94075-65FD-4378-B92C-1861BA25F223}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEE94075-65FD-4378-B92C-1861BA25F223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547E86BA-1F70-42E0-91EE-921F4BC0846D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547E86BA-1F70-42E0-91EE-921F4BC0846D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547E86BA-1F70-42E0-91EE-921F4BC0846D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547E86BA-1F70-42E0-91EE-921F4BC0846D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
