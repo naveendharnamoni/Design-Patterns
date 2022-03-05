@@ -1,7 +1,7 @@
-﻿using Strategy_Pattern_First_Look.Business.Models;
+﻿using StrategyPattern.Business.Models;
 using System;
 
-namespace Strategy_Pattern_First_Look
+namespace StrategyPattern
 {
     class Program
     {
