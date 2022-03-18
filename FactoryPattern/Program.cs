@@ -39,8 +39,22 @@ namespace FactoryPattern
             order.LineItems.Add(new Item("CSHARP_SMORGASBORD", "C# Smorgasbord", 100m), 1);
             order.LineItems.Add(new Item("CONSULTING", "Building a website", 100m), 1);
             #endregion
-            //intialise required factory
-            var cart = new ShoppingCart(order, new StandardShippingProviderFactory());
+            IPurchaseProviderFactory purchaseProviderFactory;
+
+            if (order.Sender.Country == "Sweden")
+            {
+                purchaseProviderFactory = new SwedenPurchaseProviderFactory();
+            }
+            else if (order.Sender.Country == "Australia")
+            {
+                purchaseProviderFactory = new AustraliaPurchaseProviderFactory();
+            }
+            else
+            {
+                throw new NotSupportedException("Sender country has no purchase provider");
+            }
+
+            var cart = new ShoppingCart(order, purchaseProviderFactory);
 
             var shippingLabel = cart.Finalize();
 
