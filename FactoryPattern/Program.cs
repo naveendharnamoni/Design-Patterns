@@ -1,5 +1,6 @@
 ﻿using FactoryPattern.Business;
 using FactoryPattern.Business.Models.Commerce;
+using FactoryPattern.Business.Models.Shipping.Factories;
 using System;
 
 namespace FactoryPattern
@@ -38,8 +39,22 @@ namespace FactoryPattern
             order.LineItems.Add(new Item("CSHARP_SMORGASBORD", "C# Smorgasbord", 100m), 1);
             order.LineItems.Add(new Item("CONSULTING", "Building a website", 100m), 1);
             #endregion
+            IPurchaseProviderFactory purchaseProviderFactory;
 
-            var cart = new ShoppingCart(order);
+            if (order.Sender.Country == "Sweden")
+            {
+                purchaseProviderFactory = new SwedenPurchaseProviderFactory();
+            }
+            else if (order.Sender.Country == "Australia")
+            {
+                purchaseProviderFactory = new AustraliaPurchaseProviderFactory();
+            }
+            else
+            {
+                throw new NotSupportedException("Sender country has no purchase provider");
+            }
+
+            var cart = new ShoppingCart(order, purchaseProviderFactory);
 
             var shippingLabel = cart.Finalize();
 
